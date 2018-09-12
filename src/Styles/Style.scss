@@ -1,0 +1,132 @@
+
+.Main {
+    height: 65em;
+    .Application{
+        background-color: black;
+        height: 65em;
+        position:relative;
+        .Loginouter-div{
+            margin-left:17em;
+            background-color: #5fada0;
+            width: 55em;
+            height: 41em;
+            position:absolute;
+            margin-top:11.7em; 
+              
+            .Login{
+                    background-color: #04605f;
+                    width: 46em;
+                    height: 86%;
+                    margin-left: 8%;
+                    margin-top:6%;
+                   
+               .Login-inner{
+                height: 100%;
+                overflow: hidden;
+                   .Login-inner-left{
+                       background-color: #04605f;
+                       float:left;
+                       width: 50%;
+                       height: 100%;
+                        
+                   }
+                     .Login-inner-right{ 
+                        .inner-div-middle{
+                            background-color: #f7c204;
+                            float: left;
+                            height:100.8%;
+                            width:18%;
+                            margin-left:-7.8%;
+                            transform: rotateZ(6deg);
+                            border-bottom-right-radius: 22px;
+                            border-top-left-radius: 9px;
+                            }  
+                         background-color: #f7c204;
+                         width:50%;
+                         height:100%;
+                         float:left;
+                        .Login-block{
+                            border-radius: 13px;
+                            width:70%;
+                            height:60%;
+                            margin-top:34%;
+                            margin-left:15%;
+                            border-radius:5px;
+                           -webkit-box-shadow: 15px 21px 51px -18px rgba(0,0,0,0.75);
+                           -moz-box-shadow: 15px 21px 51px -18px rgba(0,0,0,0.75);
+                            box-shadow: 15px 21px 51px -18px rgba(0,0,0,0.75);
+                            background-color:white;
+                            .Login-block-header{
+                                height:20%;
+                                border:1px solid white;
+                                border-radius:5px;
+                                box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.10);
+
+                            }
+                            .inputinlogin{
+                                margin-top: 8%;
+                                width: 94%;
+                                margin-left: 3%,
+                                
+                            }
+                            .Loginbutton{
+                                width: 90%;
+                                margin-top: 2%;
+                                margin-left: 5%;
+                                height: 17%;
+                                font-size:12px;
+                                font-weight:bold;
+                                color:white;
+                                background-color: #034f4d;
+                            }
+                        }
+                        .Signup-block{
+                            border-radius: 13px;
+                            width:70%;
+                            height:80%;
+                            margin-top:15%;
+                            margin-left:16%;
+                            border-radius:5px;
+                           -webkit-box-shadow: 15px 21px 51px -18px rgba(0,0,0,0.75);
+                           -moz-box-shadow: 15px 21px 51px -18px rgba(0,0,0,0.75);
+                            box-shadow: 15px 21px 51px -18px rgba(0,0,0,0.75);
+                            background-color:white;
+                         .inputinlogin{
+                                margin-top: 8%;
+                                width: 94%;
+                                margin-left: 3%,        
+                            }
+                            .Loginbutton{
+                                width: 90%;
+                                margin-top: 8%;
+                                margin-left: 5%;
+                                height: 12%;
+                                font-size:12px;
+                                font-weight:bold;
+                                color:white;
+                                background-color: #034f4d;
+                            }
+                        }
+                        .Bottom-message{
+                            margin-left:16%;
+                            text-align:center;
+                            margin-top:8%;
+                            font-weight: bold;
+                            color:white;
+                            display:inline-block
+                        }
+                        .Bottom-message1{
+                            margin-left:22%;
+                            text-align:center;
+                            font-weight: bold;
+                            color: #04605f;
+                            display:inline-block
+                        }
+                     }
+                }
+            }
+        }     
+    }
+}
+
+
