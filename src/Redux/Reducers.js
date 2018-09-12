@@ -2,8 +2,18 @@ import { createStore } from "redux";
 import { signUpuser } from "./Actions";
 export let initialstate = {
   Users: [
-    { email: "prashant@gmail.com", password: "12345" },
-    { email: "munish@gmail.com", password: "12345" }
+    {
+      name: "Prashant",
+      email: "prashant@gmail.com",
+      password: "12345",
+      phone: 7404702998
+    },
+    {
+      name: "Munish",
+      email: "munish@gmail.com",
+      password: "12345",
+      phone: 8796423516
+    }
   ]
 };
 

@@ -32,7 +32,8 @@ class Login extends Component {
       ...validateInput(this.state.user, this.props.data.Users)
     };
     if (isValid) {
-      console.log("User logged");
+      localStorage.setItem("Name", this.state.user.email);
+      this.props.history.push("/dashboard");
     }
     this.setState({ errors, isValid });
   };
@@ -40,88 +41,90 @@ class Login extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="Loginouter-div">
-        <div className="Login">
-          <div className="Login-inner">
-            <div className="Login-inner-left" />
-            <div className="Login-inner-right">
-              <div className="inner-div-middle" />
-              <div className="Login-block">
-                <div className="Login-block-header">
-                  &nbsp; &nbsp;
-                  <p
-                    style={{
-                      marginTop: "7%",
-                      color: "#f7c204",
-                      fontSize: "10px",
-                      display: "inline-block",
-                      fontWeight: "bold",
-                      letterSpacing: "2px"
-                    }}
-                  >
-                    ALREADY MEMBERS
-                  </p>
-                  <p
-                    style={{
-                      display: "inline-block",
-                      marginLeft: "9%",
-                      fontSize: "10px",
-                      color: "#898a8c"
-                    }}
-                  >
-                    {" "}
-                    Need Help?
-                  </p>
+      <div className="Application">
+        <div className="Loginouter-div">
+          <div className="Login">
+            <div className="Login-inner">
+              <div className="Login-inner-left" />
+              <div className="Login-inner-right">
+                <div className="inner-div-middle" />
+                <div className="Login-block">
+                  <div className="Login-block-header">
+                    &nbsp; &nbsp;
+                    <p
+                      style={{
+                        marginTop: "7%",
+                        color: "#f7c204",
+                        fontSize: "10px",
+                        display: "inline-block",
+                        fontWeight: "bold",
+                        letterSpacing: "2px"
+                      }}
+                    >
+                      ALREADY MEMBERS
+                    </p>
+                    <p
+                      style={{
+                        display: "inline-block",
+                        marginLeft: "9%",
+                        fontSize: "10px",
+                        color: "#898a8c"
+                      }}
+                    >
+                      {" "}
+                      Need Help?
+                    </p>
+                  </div>
+                  <input
+                    name="email"
+                    className="w3-input w3-border w3-round inputinlogin"
+                    placeholder="Enter Email"
+                    type="text"
+                    onChange={e =>
+                      this.enterLoginDetail(e.target.name, e.target.value)
+                    }
+                  />
+                  {errors && (
+                    <p
+                      style={{
+                        color: "red",
+                        marginLeft: "5px",
+                        marginTop: "0px"
+                      }}
+                    >
+                      {errors.email}
+                    </p>
+                  )}
+                  <input
+                    name="password"
+                    className="w3-input w3-border w3-round inputinlogin"
+                    placeholder="Enter Your Password"
+                    type="password"
+                    onChange={e =>
+                      this.enterLoginDetail(e.target.name, e.target.value)
+                    }
+                  />{" "}
+                  {errors && (
+                    <p
+                      style={{
+                        color: "red",
+                        marginLeft: "5px",
+                        marginTop: "0px"
+                      }}
+                    >
+                      {errors.password}
+                    </p>
+                  )}
+                  <Button className="Loginbutton" onClick={this.loginSubmit}>
+                    Sign In
+                  </Button>
                 </div>
-                <input
-                  name="email"
-                  className="w3-input w3-border w3-round inputinlogin"
-                  placeholder="Enter Email"
-                  type="text"
-                  onChange={e =>
-                    this.enterLoginDetail(e.target.name, e.target.value)
-                  }
-                />
-                {errors && (
-                  <p
-                    style={{
-                      color: "red",
-                      marginLeft: "5px",
-                      marginTop: "0px"
-                    }}
-                  >
-                    {errors.email}
-                  </p>
-                )}
-                <input
-                  name="password"
-                  className="w3-input w3-border w3-round inputinlogin"
-                  placeholder="Enter Your Password"
-                  type="password"
-                  onChange={e =>
-                    this.enterLoginDetail(e.target.name, e.target.value)
-                  }
-                />{" "}
-                {errors && (
-                  <p
-                    style={{
-                      color: "red",
-                      marginLeft: "5px",
-                      marginTop: "0px"
-                    }}
-                  >
-                    {errors.password}
-                  </p>
-                )}
-                <Button className="Loginbutton" onClick={this.loginSubmit}>
-                  Sign In
-                </Button>
-              </div>
 
-              <div className="Bottom-message">Dont have account yet?</div>
-              <Link to="/signup">
-                <div className="Bottom-message1">Create an account</div>
-              </Link>
+                <div className="Bottom-message">Dont have account yet?</div>
+                <Link to="/signup">
+                  <div className="Bottom-message1">Create an account</div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
